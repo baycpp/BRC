@@ -1,5 +1,5 @@
 # BRC
-![image](https://github.com/baycpp/BRC/assets/124257665/9417b64f-7a17-4bc6-82ba-e8569bb9af35)
+![image](https://github.com/baycpp/BRC/assets/124257665/ab713bd4-4e05-4467-a814-040c39baa271)
 
 
 
