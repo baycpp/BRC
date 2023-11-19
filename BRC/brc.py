@@ -53,18 +53,25 @@ def combination_brute(characters):
     rar = input(Fore.CYAN + "Rar dosyasını giriniz: ")
     max_length = input(Fore.CYAN + "Maksimum kaç hane: ")
 
-    for r in range(1, int(max_length)+1):
-            for combo in combinations_with_replacement(characters, r=r):
-                command = f"7z.exe x {rar} -p{''.join(combo)} -Y"
-                p = subprocess.Popen(command, stdin=subprocess.PIPE, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-                p.communicate(input='Y \n'.encode())
-                
-                if p.returncode == 0:
-                    print(Fore.GREEN + "Şifre Bulundu: ", ''.join(combo))
-                    break
+    return_code = 1
 
-                else:
-                    print(Fore.RED + "Denenen Şifre: ", ''.join(combo))
+    for r in range(1, int(max_length)+1):
+            if return_code == 0:
+                break
+
+            else:
+                for combo in combinations_with_replacement(characters, r=r):
+                    command = f"7z.exe x {rar} -p{''.join(combo)} -Y"
+                    p = subprocess.Popen(command, stdin=subprocess.PIPE, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                    p.communicate(input='Y \n'.encode())
+
+                    if p.returncode == 0:
+                        print(Fore.GREEN + "Şifre Bulundu: ", ''.join(combo))
+                        return_code = 0
+                        break
+
+                    else:
+                        print(Fore.RED + "Denenen Şifre: ", ''.join(combo))
 
 def rarCrackerWithCombination():
     print("\n1: Olası tüm kombinasyonlar")
