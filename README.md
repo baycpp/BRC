@@ -14,4 +14,4 @@ Proje İsmi: BRC
 
 Proje açıklaması:
 
-Bay Rar Cracker programı, şifresini unuttuğunuz RAR dosyalarına isteğe göre wordlist veya kombinasyon kullanarak kırmaya çalışan, python ile yazılmış bir araçtır.
+Bay Rar Cracker programı, şifresini unuttuğunuz RAR dosyalarını isteğe göre wordlist veya kombinasyon kullanarak kırmaya çalışan, python ile yazılmış bir araçtır.
