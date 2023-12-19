@@ -8,3 +8,8 @@ pip install -r requirements.txt
 
 python3 brc.py
 
+
+# Proje Hakkında
+Proje İsmi: BRC
+Proje açıklaması:
+Bay Rar Cracker programı; şifresini unuttuğun rar dosyalarına isteğe göre wordlist veya kombinasyon kullanarak kırmaya çalışan, python ile yazılmış bir araçtır.
